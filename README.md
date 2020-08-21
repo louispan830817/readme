@@ -7,6 +7,7 @@
 - [建立開發環境](#建立開發環境)
 - [Native code修改](#native-code修改)
 - [Known issue](#known-issue)
+- [CodePush](#CodePush)
 
 
 
@@ -80,6 +81,14 @@
 - 使用Xcode 11 build的話，無法在iOS 13的手機偵測錄影，交接時是用Xcode 10.3 build的！
 
 
-
-
+## CodePush
+- 流程
+  - APPCenter 進行登入 
+    - appcenter login
+  - 熱更新更版指令(注意更版請確認功能是否確認完善再進行更版<總共4版>)
+    - code-push release-react(指令) + 團隊名稱/APPCENTER專案名稱 ＋ device --d + 環境(Production/Dev) --t + 版本號 --m + 強制更新(true/false)
+      - code-push release-react wieduapp/WistronAppCodePush_IOS ios --d Production --t 2.0.3 --m true
+      - code-push release-react wieduapp/WistronAppCodePush_Android android --d Production --t 2.0.3 --m true
+      - code-push release-react wieduapp/WixtraAppCodePush_IOS ios --d Production --t 2.0.3 --m true
+      - code-push release-react wieduapp/WixtraAppCodePush_Android android --d Production --t 2.0.3 --m true
 
